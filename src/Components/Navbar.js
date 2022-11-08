@@ -4,7 +4,7 @@ const Navbar = () => {
     const [user, setUser] = useState([])
   return (
     <div>
-      <div className="navbar bg-indigo-200">
+      <div className="navbar bg-gray-100	">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -66,7 +66,7 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <a className="btn">Log In</a>
+            <button className="btn btn-primary mr-5">Login</button>
           )}
         </div>
       </div>
