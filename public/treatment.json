@@ -1,0 +1,68 @@
+[
+    {
+    "id": 1,
+    "title": "Renal Dialysis",
+    "price": 109.95,
+    "description": "Kidney dialysis is the process of removing excess water, solutes, and toxins from the blood in people whose kidneys can no longer perform these functions naturally. This is referred to as renal replacement therapy. The first successful dialysis was performed in 1943.",
+    "image": "https://i.ibb.co/Qpc7SPp/download.jpg",
+    "rating": {
+    "rate": 3.9,
+    "count": 120
+    }
+    },
+    {
+    "id": 2,
+    "title": "Knee Treatments",
+    "price": 22.3,
+    "description": "The best-laid plans are only as good as the execution. Enhance the predictability of both total and partial knee arthroplasties by combining 3D planning with our cost-effective surgical guides. As the world's largest supplier of knee guides, we're proud to support our partners with the capacity, stability, and reliability they require to help improve patient outcomes.",
+    "image": "https://i.ibb.co/Q8840zj/download2.jpg",
+    "rating": {
+    "rate": 4.1,
+    "count": 259
+    }
+    },
+    {
+    "id": 3,
+    "title": "Treatment of Dementia",
+    "price": 55.99,
+    "description": "Dementia is not a specific disease but is rather a general term for the impaired ability to remember, think, or make decisions that interferes with doing everyday activities. Alzheimer’s disease is the most common type of dementia. Though dementia mostly affects older adults, it is not a part of normal aging.",
+    "image": "https://i.ibb.co/FqZXHsB/images-q-tbn-ANd9-Gc-Rwafv-BBF1-DSatnftvdkw-D2-Ggf50-xo-VXc-ODA-usqp-CAU.jpg",
+    "rating": {
+    "rate": 4.7,
+    "count": 500
+    }
+    },
+    {
+    "id": 4,
+    "title": "Cancer Treatments",
+    "price": 15.99,
+    "description": "Cancer treatment is based on the stage of the cancer. Sometimes, treatment is meant to cure the cancer. Other times, the goal is to stop the cancer from spreading further. Some treatments may be given to reduce side effects of other treatments and make you more comfortable. This is called palliative care. Palliative care can be given at any stage of your cancer treatment, even if your cancer is treatable. Your treatment plan may change over time.",
+    "image": "https://i.ibb.co/ZMHzGTV/woman-with-headscarf-getting-chemo-treatment-article.jpg",
+    "rating": {
+    "rate": 2.1,
+    "count": 430
+    }
+    },
+    {
+    "id": 5,
+    "title": "Fluid Replacement",
+    "price": 695,
+    "description": "Fluid replacement or fluid resuscitation is the medical practice of replenishing bodily fluid lost through sweating, bleeding, fluid shifts or other pathologic processes. Fluids can be replaced with oral rehydration therapy (drinking), intravenous therapy, rectally such as with a Murphy drip, or by hypodermoclysis, the direct injection of fluid into the subcutaneous tissue. Fluids administered by the oral and hypodermic routes are absorbed more slowly than those given intravenously.",
+    "image": "https://i.ibb.co/zxr454K/Cholera-rehydration-nurses.jpg",
+    "rating": {
+    "rate": 4.6,
+    "count": 400
+    }
+    },
+    {
+    "id": 6,
+    "title": "Laparoscopy",
+    "price": 168,
+    "description": "Laparoscopy (from Ancient Greek λαπάρα (lapára) 'flank, side', and σκοπέω (skopéō) 'to see') is an operation performed in the abdomen or pelvis using small incisions (usually 0.5–1.5 cm) with the aid of a camera. The laparoscope aids diagnosis or therapeutic interventions with a few small cuts in the abdomen.Laparoscopic surgery, also called minimally invasive procedure, bandaid surgery, or keyhole surgery, is a modern surgical technique. There are a number of advantages to the patient with laparoscopic surgery versus an exploratory laparotomy. These include reduced pain due to smaller incisions, reduced hemorrhaging, and shorter recovery time. The key element is the use of a laparoscope, a long fiber optic cable system that allows viewing of the affected area by snaking the cable from a more distant, but more easily accessible location.",
+    "image": "https://i.ibb.co/VmQswFY/800px-Blausen-0602-Laparoscopy-02.png",
+    "rating": {
+    "rate": 3.9,
+    "count": 70
+    }
+    }
+    ]

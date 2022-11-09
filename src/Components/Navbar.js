@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import profile from '../Assets/Profile/profile.png'
 
 const Navbar = () => {
-    const [user, setUser] = useState([])
+  const [user, setUser] = useState([]);
   return (
     <div>
-      <div className="navbar bg-gray-100	">
+      <div className="navbar bg-slate-50 	">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -28,7 +30,7 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <a>Portfolio</a>
@@ -43,31 +45,41 @@ const Navbar = () => {
           <a className="btn btn-ghost normal-case text-3xl">Prescription</a>
         </div>
         <div className="navbar-end">
-          {user?.email ? (
-            <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img src="https://placeimg.com/80/80/people" />
-                </div>
-              </label>
-              <ul
-                tabIndex={0}
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a className="justify-between">Profile</a>
-                </li>
-                <li>
-                  <a>Settings</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul>
-            </div>
-          ) : (
-            <button className="btn btn-primary mr-5">Login</button>
-          )}
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+               { user?.photoURL ? <img src={user?.photoURL} alt="" /> : <img src={profile} alt=""/>}
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link to='/login'>Profile</Link>
+              </li>
+             {user?.email ?  <span>
+              <li>
+                <Link>Settings</Link>
+              </li>
+              <li>
+                <Link>Log Out</Link>
+              </li> 
+             </span>
+             :
+             <span>
+              <li>
+                <Link to="/login" className="">
+                  Log In
+                </Link>
+              </li>
+             <li>
+                <Link to='/signup'>Sign Up</Link>
+              </li>
+             </span>
+             }
+            </ul>
+          </div>
         </div>
       </div>
     </div>
