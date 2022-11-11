@@ -38,16 +38,10 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a>Blogs</a>
+                <Link to={`/blogs`}>Blogs</Link>
               </li>
               <li>
-                <a>About Us</a>
-              </li>
-              <li>
-                <a>Add Service</a>
-              </li>
-              <li>
-                <a>My Review</a>
+                <Link to={`/services`}>Services</Link>
               </li>
             </ul>
           </div>
@@ -66,12 +60,12 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <Link to='/login'>Profile</Link>
-              </li>
              {user?.email ?  <span>
               <li>
-                <Link>Settings</Link>
+                <a>Add Service</a>
+              </li>
+              <li>
+                <a>My Review</a>
               </li>
               <li>
                 <Link onClick={logOutHandler}>Log Out</Link>

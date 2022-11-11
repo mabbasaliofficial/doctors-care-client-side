@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import TreatmentCard from "./TreatmentCard";
 
 const Treatment = () => {
   const [treatments, setTreatments] = useState([]);
   useEffect(() => {
-    fetch("treatment.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setTreatments(data));
   }, []);
@@ -14,13 +15,13 @@ const Treatment = () => {
       <p className="text-center">Join The Prescription, Safe Your Life...</p>
       <div className="mx-24 grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
         {treatments.map((treatment) => (
-          <TreatmentCard key={treatment.id} treatment={treatment}></TreatmentCard>
+          <TreatmentCard key={treatment._id} treatment={treatment}></TreatmentCard>
         ))}
       </div>
       <div className="flex justify-center mt-10">
-      <button className="btn btn-primary">
+      <Link to={`/services`} className="btn btn-primary">
         See All
-      </button>
+      </Link>
       </div>
     </div>
   );
