@@ -1,10 +1,11 @@
 import colorNames from 'daisyui/src/colors/colorNames';
 import React, { useContext } from 'react';
+import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Contexts/UserContext';
 
 const Signup = () => {
-    const {createUser} = useContext(AuthContext) 
+    const {createUser, googleSignIn} = useContext(AuthContext) 
     const signupHandler = event => {
         event.preventDefault()
         const form = event.target;
@@ -20,6 +21,16 @@ const Signup = () => {
             console.error(error)
         })
         
+    }
+    const googleSign = () => {
+      googleSignIn()
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+      })
+      .then(error => {
+        console.log(error)
+      })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -52,7 +63,11 @@ const Signup = () => {
                   <input className="btn" type="submit" value="Signup" />
               </div>
           </form>
-          <span className="">Already have an account? <Link className="text-primary" to='/login'>Log In</Link></span>
+          <div className='w-full mt-5'>
+            <button onClick={googleSign} className='flex items-center w-full justify-center btn btn-primary '><span className='mx-1'><FaGoogle></FaGoogle></span> <span className='mx-1'>Google Sign In</span></button>
+          </div>
+          <span className="mt-5">Already have an account? <Link className="text-primary" to='/login'>Log In</Link></span>
+          
             </div>
           </div>
         </div>

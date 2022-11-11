@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import profile from '../Assets/Profile/profile.png'
 import logo from "../Assets/Logo/logo.png"
+import { AuthContext } from "../Contexts/UserContext";
 
 const Navbar = () => {
-  const [user, setUser] = useState([]);
+  const {user} = useContext(AuthContext)
   return (
     <div>
       <div className="navbar bg-slate-50 	">

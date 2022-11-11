@@ -10,7 +10,7 @@ const Services = () => {
             </h1>
          <div className='flex justify-center'>
          <div className="card w-80 bg-base-100 mx-2">
-  <figure className='bg-indigo-100 py-10'> <FaBriefcaseMedical className='w-full h-20'></FaBriefcaseMedical></figure>
+  <figure className='py-10'> <FaBriefcaseMedical className='w-full h-20'></FaBriefcaseMedical></figure>
   <div className="card-body">
     <h2 className="card-title">
     MODERN TECHNOLOGY
@@ -19,7 +19,7 @@ const Services = () => {
   </div>
 </div>
          <div className="card w-80 bg-base-100 mx-2">
-  <figure className='bg-indigo-100 py-10'> <FaLaptopMedical className='w-full h-20'></FaLaptopMedical></figure>
+  <figure className='py-10'> <FaLaptopMedical className='w-full h-20'></FaLaptopMedical></figure>
   <div className="card-body">
     <h2 className="card-title">
 HEALTHCARE SOLUTIONS
@@ -28,7 +28,7 @@ HEALTHCARE SOLUTIONS
   </div>
 </div>
          <div className="card w-80 bg-base-100 mx-2">
-  <figure className='bg-indigo-100 py-10'> <FaClinicMedical className='w-full h-20'></FaClinicMedical></figure>
+  <figure className='py-10'> <FaClinicMedical className='w-full h-20'></FaClinicMedical></figure>
   <div className="card-body">
     <h2 className="card-title">
     24/7 AVAILABILITY
