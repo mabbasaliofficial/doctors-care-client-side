@@ -6,9 +6,9 @@ const Footer = () => {
     <footer className="footer footer-center p-10 bg-slate-50 text-white-content">
       <div>
         <img src={logo} className='w-40 h-20' alt="" />
+          <h1 className="text-3xl font-bold text-orange-500	">Dr. Al Razi</h1>
         <p className="font-bold">
-          The Prescription Ltd. <br />
-          Providing reliable treatment since 1992
+          Providing reliable treatment since 2003
         </p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>

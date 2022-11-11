@@ -1,11 +1,11 @@
 import React from 'react';
-import Carousel from '../Components/Carousel';
+import Banner from '../Components/Banner';
 import Treatment from '../Components/Treatment';
 
 const Home = () => {
     return (
         <div>
-            <Carousel/>
+            <Banner/>
             <Treatment/>
         </div>
     );

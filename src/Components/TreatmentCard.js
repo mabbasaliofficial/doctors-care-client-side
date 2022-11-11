@@ -11,7 +11,7 @@ const TreatmentCard = ({treatment}) => {
     <p>{description.length > 100 ? <p>{description.slice(0, 100) + '...'} <Link to={`/course/${id}`} className='text-blue-400'>Read More</Link></p> : <p>{description}</p>}</p>
     <p className='font-bold text-orange-600'>Price : ${price}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn btn-primary">View Details</button>
     </div>
   </div>
 </div>

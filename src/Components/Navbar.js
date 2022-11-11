@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import profile from '../Assets/Profile/profile.png'
+import logo from "../Assets/Logo/logo.png"
 
 const Navbar = () => {
   const [user, setUser] = useState([]);
@@ -33,16 +34,22 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a>Portfolio</a>
+                <a>Blogs</a>
               </li>
               <li>
-                <a>About</a>
+                <a>About Us</a>
+              </li>
+              <li>
+                <a>Add Service</a>
+              </li>
+              <li>
+                <a>My Review</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-3xl">Prescription</a>
+          <img className="w-20" src={logo} alt="" />
         </div>
         <div className="navbar-end">
           <div className="dropdown dropdown-end">

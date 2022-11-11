@@ -1,9 +1,25 @@
-import React from 'react';
+import colorNames from 'daisyui/src/colors/colorNames';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Contexts/UserContext';
 
 const Signup = () => {
+    const {createUser} = useContext(AuthContext) 
     const signupHandler = event => {
         event.preventDefault()
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => {
+            console.error(error)
+        })
+        
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -18,19 +34,19 @@ const Signup = () => {
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="text" placeholder="Name" className="input input-bordered" />
+                <input type="text" name='name' placeholder="Name" className="input input-bordered" />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="Email" className="input input-bordered" />
+                <input type="email" name='email' placeholder="Email" className="input input-bordered" />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="Password" className="input input-bordered" />
+                <input type="password" name='password' placeholder="Password" className="input input-bordered" />
               </div>
               <div className="form-control mt-6">
                   <input className="btn" type="submit" value="Signup" />
