@@ -5,7 +5,7 @@ import TreatmentCard from "./TreatmentCard";
 const Treatment = () => {
   const [treatments, setTreatments] = useState([]);
   useEffect(() => {
-    fetch("https://doctors-point.vercel.app/services")
+    fetch("https://doctors-point.vercel.app/homeservices")
       .then((res) => res.json())
       .then((data) => setTreatments(data));
   }, []);
