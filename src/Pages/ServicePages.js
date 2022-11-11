@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import TreatmentCard from "../Components/TreatmentCard";
 import useTitle from "../Hooks/useTitle";
 
+
 const ServicePages = () => {
     useTitle('Services')
   const treatments = useLoaderData();

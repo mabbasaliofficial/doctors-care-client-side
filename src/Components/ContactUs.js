@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiMail, HiLocationMarker } from "react-icons/hi";
+import useTitle from "../Hooks/useTitle";
 
 const ContactUs = () => {
+  useTitle('Contact Us');
     return (
 <div  className=' bg-base-200 py-10'>
     <h1 className='text-center text-4xl font-bold'>Contact Us</h1>
