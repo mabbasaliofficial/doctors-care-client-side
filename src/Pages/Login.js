@@ -2,8 +2,10 @@ import colorNames from "daisyui/src/colors/colorNames";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Contexts/UserContext";
+import useTitle from "../Hooks/useTitle";
 
 const Login = () => {
+  useTitle('Login')
   const {signInUser} = useContext(AuthContext)
     const loginHandler = event => {
         event.preventDefault()

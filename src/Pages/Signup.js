@@ -3,8 +3,10 @@ import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Contexts/UserContext';
+import useTitle from '../Hooks/useTitle';
 
 const Signup = () => {
+  useTitle('Sign Up');
     const {createUser, googleSignIn} = useContext(AuthContext) 
     const signupHandler = event => {
         event.preventDefault()
