@@ -5,7 +5,10 @@ import logo from "../Assets/Logo/logo.png"
 import { AuthContext } from "../Contexts/UserContext";
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext)
+  const logOutHandler = ()  => {
+    logOut()
+  }
   return (
     <div>
       <div className="navbar bg-slate-50 	">
@@ -71,7 +74,7 @@ const Navbar = () => {
                 <Link>Settings</Link>
               </li>
               <li>
-                <Link>Log Out</Link>
+                <Link onClick={logOutHandler}>Log Out</Link>
               </li> 
              </span>
              :

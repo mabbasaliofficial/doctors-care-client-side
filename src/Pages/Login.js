@@ -1,9 +1,24 @@
-import React from "react";
+import colorNames from "daisyui/src/colors/colorNames";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Contexts/UserContext";
 
 const Login = () => {
+  const {signInUser} = useContext(AuthContext)
     const loginHandler = event => {
         event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        signInUser(email, password)
+        .then(result =>{
+          const user = result.user;
+          console.log(user)
+        })
+        .then(error =>{
+          console.error(error)
+        })
+
     }
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -18,13 +33,13 @@ const Login = () => {
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input type="email" placeholder="Email" className="input input-bordered" />
+              <input type="email" name="email" placeholder="Email" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input type="password" placeholder="Password" className="input input-bordered" />
+              <input type="password" name="password" placeholder="Password" className="input input-bordered" />
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
