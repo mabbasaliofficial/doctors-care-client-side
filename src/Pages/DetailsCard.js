@@ -6,7 +6,7 @@ import useTitle from '../Hooks/useTitle';
 
 const DetailsCard = () => {
   const {loading} = useContext(AuthContext)
-    const {_id, image, title, description, price} = useLoaderData()
+    const { image, title, description, price} = useLoaderData()
     useTitle('Details')
     if(loading){
       return <progress className="progress w-full"></progress>;

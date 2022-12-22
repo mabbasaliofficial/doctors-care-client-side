@@ -1,11 +1,12 @@
-import colorNames from "daisyui/src/colors/colorNames";
+
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/UserContext";
 import useTitle from "../Hooks/useTitle";
 
 const Login = () => {
   useTitle('Login')
+  const navigate = useNavigate()
   const {signInUser} = useContext(AuthContext)
     const loginHandler = event => {
         event.preventDefault()
@@ -16,6 +17,7 @@ const Login = () => {
         .then(result =>{
           const user = result.user;
           console.log(user)
+          navigate(`/`)
         })
         .then(error =>{
           console.error(error)
@@ -42,11 +44,7 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input type="password" name="password" placeholder="Password" className="input input-bordered" />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
+             
             </div>
             <div className="form-control mt-6">
                 <input className="btn" type="submit" value="Login" />

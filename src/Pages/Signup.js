@@ -1,4 +1,4 @@
-import colorNames from 'daisyui/src/colors/colorNames';
+
 import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
@@ -8,11 +8,10 @@ import useTitle from '../Hooks/useTitle';
 const Signup = () => {
   useTitle('Sign Up');
   const navigate = useNavigate()
-    const {createUser, googleSignIn, loading} = useContext(AuthContext) 
+    const {createUser, googleSignIn} = useContext(AuthContext) 
     const signupHandler = event => {
         event.preventDefault()
         const form = event.target;
-        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         createUser(email, password)
