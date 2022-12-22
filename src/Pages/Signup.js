@@ -1,23 +1,32 @@
 
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Contexts/UserContext';
 import useTitle from '../Hooks/useTitle';
+import toast from 'react-hot-toast';
 
 const Signup = () => {
   useTitle('Sign Up');
+  const [error, setError] = useState(null);
   const navigate = useNavigate()
     const {createUser, googleSignIn} = useContext(AuthContext) 
+    
     const signupHandler = event => {
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+
+        if (password.length < 8) {
+          setError('Password should be 8 characters or more.');
+          return;
+      }
         createUser(email, password)
         .then(result => {
             const user = result.user;
             console.log(user)
+            toast.success(`user create successfully`)
             navigate(`/`)
         })
         .catch(error => {
@@ -30,6 +39,7 @@ const Signup = () => {
       .then(result => {
         const user = result.user;
         console.log(user)
+        toast.success(`user create successfully`)
         navigate(`/`)
       })
       .then(error => {
@@ -62,6 +72,7 @@ const Signup = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input type="password" name='password' placeholder="Password" className="input input-bordered" />
+                <p className='text-error'>{error}</p>
               </div>
               <div className="form-control mt-6">
                   <input className="btn" type="submit" value="Signup" />
