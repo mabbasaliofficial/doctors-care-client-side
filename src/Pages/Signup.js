@@ -1,13 +1,14 @@
 import colorNames from 'daisyui/src/colors/colorNames';
 import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Contexts/UserContext';
 import useTitle from '../Hooks/useTitle';
 
 const Signup = () => {
   useTitle('Sign Up');
-    const {createUser, googleSignIn} = useContext(AuthContext) 
+  const navigate = useNavigate()
+    const {createUser, googleSignIn, loading} = useContext(AuthContext) 
     const signupHandler = event => {
         event.preventDefault()
         const form = event.target;
@@ -18,6 +19,7 @@ const Signup = () => {
         .then(result => {
             const user = result.user;
             console.log(user)
+            navigate(`/`)
         })
         .catch(error => {
             console.error(error)
@@ -29,6 +31,7 @@ const Signup = () => {
       .then(result => {
         const user = result.user;
         console.log(user)
+        navigate(`/`)
       })
       .then(error => {
         console.log(error)

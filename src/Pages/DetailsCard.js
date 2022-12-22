@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../Contexts/UserContext';
 import useTitle from '../Hooks/useTitle';
 
 const DetailsCard = () => {
+  const {loading} = useContext(AuthContext)
     const {_id, image, title, description, price} = useLoaderData()
     useTitle('Details')
+    if(loading){
+      return <progress className="progress w-full"></progress>;
+    }
     return (
         <div className="card w-1/3 bg-base-100 mt-10 mb-10 shadow-xl mx-auto border border-primary">
         <figure className="px-10 pt-10">
